@@ -1,27 +1,20 @@
-use std::{io::BufRead, process::Command, env};
+use std::env;
 
-fn main() -> Result<(), std::io::Error>  {
-    export_platform_triple(&query_host_triple()?);
-    Ok(())
+fn main() {
+    // Cargo sets the host and target env vars for build scripts, but not crates:
+    // https://doc.rust-lang.org/cargo/reference/environment-variables.html#environment-variables-cargo-sets-for-build-scripts
+    export_var("HOST_PLATFORM", &query_host_triple());
+    export_var("TARGET_PLATFORM", &query_target_triple());
 }
 
-fn export_platform_triple(triple: &str) {
-    println!("cargo:rustc-env=HOST_PLATFORM={}", triple);
+fn export_var(name: &str, value: &str) {
+    println!("cargo:rustc-env={}={}", name, value);
 }
 
-fn query_host_triple() -> Result<String, std::io::Error> {
-    let path_to_rustc = env::var_os("CARGO_BUILD_RUSTC").unwrap();
-    let host_triple = Command::new(path_to_rustc)
-        .arg("-vV")
-        .output()?
-        .stdout
-        .lines()
-        .map(|l| l.unwrap()) //rustc should not produce non-utf8 output
-        .find(|l| l.starts_with("host: "))
-        .map(|l| l[6..].to_string())
-        .expect(
-            "Failed to find the host platform in rustc output!\
-                Please report a bug in `host_platform` crate.",
-        );
-    Ok(host_triple)
+fn query_target_triple() -> String {
+    env::var("TARGET").unwrap()
+}
+
+fn query_host_triple() -> String {
+    env::var("HOST").unwrap()
 }
