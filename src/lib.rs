@@ -1,0 +1,1 @@
+pub const HOST_PLATFORM: &str = env!("HOST_PLATFORM");
