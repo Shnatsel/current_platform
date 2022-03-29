@@ -10,7 +10,7 @@ fn export_platform_triple(triple: &str) {
 }
 
 fn query_host_triple() -> Result<String, std::io::Error> {
-    let path_to_rustc = env::var("CARGO_BUILD_RUSTC").unwrap();
+    let path_to_rustc = env::var_os("CARGO_BUILD_RUSTC").unwrap();
     let host_triple = Command::new(path_to_rustc)
         .arg("-vV")
         .output()?
