@@ -1,9 +1,9 @@
 [package]
 name = "current_platform"
 version = "0.1.0"
-edition = "2018"
 license = "MIT or Apache-2.0 or Zlib"
 authors = ["Sergey \"Shnatsel\" Davidoff <shnatsel@gmail.com>"]
+rust-version = "1.19"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
