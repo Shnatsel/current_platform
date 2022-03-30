@@ -1,4 +1,4 @@
-# `current_platform`
+## `current_platform`
 
 **Find out what platform your code is running on, in Rust:**
 
