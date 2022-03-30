@@ -11,7 +11,7 @@
 //! 
 //! Platform information is resolved **at compile time,**
 //! based on the platform for which your code is compiled.
-//! So this crate incurs zero runtime cost.
+//! It incurs zero runtime cost.
 //! 
 //! This crate is intentionally minimal and only provides the target triple.
 //! You can find out other properties of the platform using crates such as

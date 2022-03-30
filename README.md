@@ -19,7 +19,7 @@ This is rarely useful; if in doubt, use `CURRENT_PLATFORM`.
 
 Platform information is resolved **at compile time,**
 based on the platform for which your code is compiled.
-This crate incurs zero runtime cost.
+It incurs zero runtime cost.
 
 This crate is intentionally minimal and only provides the target triples.
 You can find out other properties of the platform using crates such as
