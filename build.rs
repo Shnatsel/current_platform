@@ -7,7 +7,7 @@ fn main() {
     export_var("HOST_PLATFORM", &env::var("HOST").unwrap());
     export_var("TARGET_PLATFORM", &env::var("TARGET").unwrap());
     // By default Cargo only runs the build script when a file changes.
-    // This should make it re-run on target change (hopefully!)
+    // This makes it re-run on target change
      println!("cargo:rerun-if-changed-env=TARGET")
 }
 
