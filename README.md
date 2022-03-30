@@ -15,8 +15,7 @@ Will print: `Running on x86_64-unknown-linux-gnu` (or whatever you run it on).
 The target triple for the platform where the code was compiled is also included
 as `COMPILED_ON`. It is only different from the `CURRENT_PLATFORM` if the code
 was [cross-compiled.](https://en.wikipedia.org/wiki/Cross_compiler)
-This is rarely useful, and is only included for completeness.
-If in doubt, use `CURRENT_PLATFORM`.
+This is rarely useful; if in doubt, use `CURRENT_PLATFORM`.
 
 Platform information is resolved **at compile time,**
 based on the platform for which your code is compiled.
