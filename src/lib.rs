@@ -6,10 +6,13 @@
 //! assert_eq!(CURRENT_PLATFORM, "x86_64-unknown-linux-gnu");
 //! ```
 //!
-//! This information is resolved **at compile time,**
+//! The target triple for the platform where the code was compiled is also included,
+//! see [`COMPILED_ON`](COMPILED_ON). 
+//! 
+//! Platform information is resolved **at compile time,**
 //! based on the platform for which your code is compiled.
 //! So this crate incurs zero runtime cost.
-//!
+//! 
 //! This crate is intentionally minimal and only provides the target triple.
 //! You can find out other properties of the platform using crates such as
 //! [`platforms`](https://docs.rs/platforms/latest/platforms/)
