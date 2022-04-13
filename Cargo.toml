@@ -4,6 +4,7 @@ version = "0.2.0-rc.1"
 license = "MIT OR Apache-2.0 OR Zlib"
 authors = ["Sergey \"Shnatsel\" Davidoff <shnatsel@gmail.com>"]
 description = "Find out what platform your code is running on"
+repository = "https://github.com/Shnatsel/current_platform"
 rust-version = "1.19"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
