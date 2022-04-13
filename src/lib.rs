@@ -2,17 +2,20 @@
 //!
 //! ```no_run
 //! use current_platform::CURRENT_PLATFORM;
-//! // docs.rs runs on x86 Linux
-//! assert_eq!(CURRENT_PLATFORM, "x86_64-unknown-linux-gnu");
-//! ```
 //!
-//! The target triple for the platform where the code was compiled is also included,
-//! see [`COMPILED_ON`](COMPILED_ON). 
-//! 
+//! fn main() {
+//!     println!("Running on {}", CURRENT_PLATFORM);
+//! }
+//! ```
+//! will print `Running on x86_64-unknown-linux-gnu` on desktop Linux.
+//!
 //! Platform information is resolved **at compile time,**
 //! based on the platform for which your code is compiled.
-//! It incurs zero runtime cost.
-//! 
+//! It incurs **zero runtime cost.**
+//!
+//! The target triple for the platform where the code was compiled is also included,
+//! see [`COMPILED_ON`](COMPILED_ON).
+//!
 //! This crate is intentionally minimal and only provides the target triple.
 //! You can find out other properties of the platform using crates such as
 //! [`platforms`](https://docs.rs/platforms/latest/platforms/)
