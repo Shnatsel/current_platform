@@ -35,7 +35,6 @@
 // As soon as you add a `rerun-if` for this enviroment variable,
 // all the default heuristics are disabled and you'll have to recreate them manually:
 // https://github.com/rust-lang/cargo/issues/4587
-//
 // This crate to provide a separate build.rs with its own self-contained `rerun-if`
 // that we've already figured out and tested, and will not trample all over
 // the change detection your own build script relies on.
