@@ -26,6 +26,13 @@
 /// The platform on which your code is running.
 ///
 /// Also known as "target platform".
+
+// I know what you're thinking:
+// "I should have simply put `env!` in my binary instead of using this crate!"
+// Not so fast: this variable is only available here because we exported it
+// from build.rs, and trust me, if you have build.rs already used for something,
+// figuring out the re-run logic for your build.rs is gonna be a pain.
+// Hence this crate to provide a separate build.rs with its own self-contained `rerun-if`.
 pub const CURRENT_PLATFORM: &str = env!("TARGET_PLATFORM");
 
 /// The platform on which your code was compiled.
