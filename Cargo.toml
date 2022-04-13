@@ -6,6 +6,8 @@ authors = ["Sergey \"Shnatsel\" Davidoff <shnatsel@gmail.com>"]
 description = "Find out what platform your code is running on"
 repository = "https://github.com/Shnatsel/current_platform"
 rust-version = "1.19"
+# Placing the build script in src/ stops people from thinking that lib.rs is all there is to this crate
+build = "src/build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
