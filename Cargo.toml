@@ -1,6 +1,6 @@
 [package]
 name = "current_platform"
-version = "0.2.0-rc.1"
+version = "0.2.0"
 license = "MIT OR Apache-2.0 OR Zlib"
 authors = ["Sergey \"Shnatsel\" Davidoff <shnatsel@gmail.com>"]
 description = "Find out what platform your code is running on"
