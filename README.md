@@ -12,14 +12,14 @@ fn main() {
 
 will print `Running on x86_64-unknown-linux-gnu` on desktop Linux.
 
+Platform information is resolved **at compile time,**
+based on the platform for which your code is compiled.
+It incurs **zero runtime cost.**
+
 The target triple for the platform where the code was compiled is also included
 as `COMPILED_ON`. It is only different from the `CURRENT_PLATFORM` if the code
 was [cross-compiled.](https://en.wikipedia.org/wiki/Cross_compiler)
 This is rarely useful; if in doubt, use `CURRENT_PLATFORM`.
-
-Platform information is resolved **at compile time,**
-based on the platform for which your code is compiled.
-It incurs **zero runtime cost.**
 
 This crate is intentionally minimal and only provides the target triples.
 You can find out other properties of the platform using crates such as
